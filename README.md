@@ -10,23 +10,35 @@ $this->executeMySQL("Query Here", Array Parameter (optional), Search (optional))
 
 Example:
 
-require_once 'security.inc.php';
-
 Class User extends Database {
 
-public function addUser($username, $password) {
-
-  $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array(protectData($username), protectData($password)));
-
-  if ($this->isInserted()) {
-
-    return true;
-
-  } 
-  else {
+  public function addUser($username, $password) {
   
-    return false;
+    $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array($username, $password));
+  
+    if ($this->isInserted()) {
+  
+      return true;
+  
+    }  
+    else {
     
-  {
+      return false;
+  
+    }
+    
+  }
+  
+}
+
+$user = new User();
+
+$insertData = $user->addUser("TEST", "TEST");
+
+if ($insertData) {
+
+echo "successfully added user";
 
 }
+
+Note: You can use any query either is it Create, Read, Update, Delete, and Search on the method executeMySQL
