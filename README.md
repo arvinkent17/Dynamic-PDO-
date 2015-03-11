@@ -10,13 +10,12 @@ $this->executeMySQL("Query Here", Array Parameter (optional), Search (optional))
 
 Example:
 
-require_once 'security.inc.php';
-
 Class User extends Database {
+
   public function addUser($username, $password) {
   
-    $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array(protectData($username), protectData($password)));
-  
+    $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array($username, $password));
+    
     if ($this->isInserted()) {
   
       return true;
@@ -29,6 +28,7 @@ Class User extends Database {
     }
     
   }
+  
 }
 
 $user = new User();
