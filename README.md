@@ -13,7 +13,6 @@ Example:
 require_once 'security.inc.php';
 
 Class User extends Database {
-
   public function addUser($username, $password) {
   
     $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array(protectData($username), protectData($password)));
@@ -30,7 +29,6 @@ Class User extends Database {
     }
     
   }
-  
 }
 
 $user = new User();
