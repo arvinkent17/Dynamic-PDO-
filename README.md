@@ -10,6 +10,8 @@ $this->executeMySQL("Query Here", Array Parameter (optional), Search (optional))
 
 Example:
 
+<?php
+
 Class User extends Database {
 
   public function addUser($username, $password) {
@@ -40,5 +42,7 @@ if ($insertData) {
 echo "successfully added user";
 
 }
+
+?>
 
 Note: You can use any query either is it Create, Read, Update, Delete, and Search on the method executeMySQL
