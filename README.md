@@ -9,7 +9,9 @@ Just extend your class with database class and use executeMySQL method
 $this->executeMySQL("Query Here", Array Parameter (optional), Search (optional));
 
 Example:
+
 require_once 'security.inc.php';
+
 Class User extends Database {
 
 public function addUser($username, $password) {
@@ -20,6 +22,11 @@ public function addUser($username, $password) {
 
     return true;
 
-  }  
+  } 
+  else {
+  
+    return false;
+    
+  {
 
 }
