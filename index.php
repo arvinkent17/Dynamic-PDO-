@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dynamic PDO</title>
 </head>
 <body>
 <!-- Viewing of Data -->
