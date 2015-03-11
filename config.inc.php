@@ -12,10 +12,10 @@
 	# DIRECTORY PATH
 	defined('BASE_URI') ? null : define('BASE_URI', dirname(dirname(__FILE__)).DS);
 	# SERVER HOST NAME
-	defined("SERVER_HOST") ? null : define("SERVER_HOST", "localhost");
+	defined("SERVER_HOST") ? null : define("SERVER_HOST", "HOST NAME HERE");
 	# SERVER USERNAME
-	defined("SERVER_USERNAME") ? null : define("SERVER_USERNAME", "root");
+	defined("SERVER_USERNAME") ? null : define("SERVER_USERNAME", "USERNAME HERE");
 	# SERVER PASSWORD
-	defined("SERVER_PASSWORD") ? null : define("SERVER_PASSWORD", "");
+	defined("SERVER_PASSWORD") ? null : define("SERVER_PASSWORD", "PASSWORD HERE");
 	# DATABASE NAME
-	defined("DATABASE_NAME") ? null : define("DATABASE_NAME", "db_sample");
+	defined("DATABASE_NAME") ? null : define("DATABASE_NAME", "DATABASE NAME HERE");
