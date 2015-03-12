@@ -11,38 +11,53 @@ $this->executeMySQL("Query Here", Array Parameter (optional), Search (optional))
 Example:
 
 <?php
-
-Class User extends Database {
-
-  public function addUser($username, $password) {
+    Class User extends Database {
   
-    $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array($username, $password));
+    /**
+     * This will only insert username and password to your database table named User.
+     * 
+     * Every parameter will be automatically sanitize in the method executeMySQL
+     *
+     * @param string $username
+     * @param string $password
+     * @todo you can require security.inc.php to add more security to your inputs
+     * @return true or false
+     * @access public
+     */
+    public function addUser($username, $password) {
     
-    if ($this->isInserted()) {
-  
-      return true;
-  
-    }  
-    else {
+      $this->executeMySQL("INSERT into User (username, password) VALUES (?, ?)", array($username, $password));
+      
+      if ($this->isInserted()) {
     
-      return false;
+        return true;
+    
+      }  
+      else {
+      
+        return false;
+    
+      }
+      
+    }
+  
+  }
+?>
+<!-- This will only for insert data to your database table -->
+<?php 
+    $user = new User();
+  
+    $insertData = $user->addUser("TEST", "TEST");
+  
+    if ($insertData) {
+  
+      echo "successfully added user";
   
     }
-    
-  }
-  
-}
-
-$user = new User();
-
-$insertData = $user->addUser("TEST", "TEST");
-
-if ($insertData) {
-
-echo "successfully added user";
-
-}
-
 ?>
 
-Note: You can use any query either is it Create, Read, Update, Delete, and Search on the method executeMySQL
+Note: 
+You can use any query either is it Create, Read, Update, Delete, and Search on the method executeMySQL.
+Additional Note:
+You can download a copy of this because it has already a working examples and all you have to do is to change the
+the server details on config.inc.php.
