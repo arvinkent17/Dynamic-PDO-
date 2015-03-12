@@ -1,12 +1,12 @@
 Dynamic PDO Database Class
 
-It is easy, secured and reusable to any website projects development that uses PHP programming language.
+It is easy, secured and reusable to any website project development that uses PHP programming language.
 
 How to use it?
 
-Just extend your class with database class and use executeMySQL method
+Just extend your class with database class and use the executeMySQL method
 
-$this->executeMySQL("Query Here", Array Parameter (optional), Search (optional));
+$this->executeMySQL('Query Here', Array Parameter (optional), Search (optional));
 
 Example:
 
