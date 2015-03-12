@@ -70,15 +70,17 @@ Example:
 ?>
 <!-- This will only for insert data to your database table -->
 <?php 
+
     $user = new User();
   
-    $insertData = $user->addUser("TEST", "TEST");
+    $insertData = $user->addUser('TEST', 'TEST');
   
     if ($insertData) {
   
       echo "successfully added user";
   
     }
+    
 ?>
 <!-- 
 
@@ -88,6 +90,7 @@ The index key inside $userData is the column name from your database table.
 
 -->
 <?php
+
      $user = new User();
      
      $viewData = $user->viewUser();
@@ -101,6 +104,7 @@ The index key inside $userData is the column name from your database table.
         }
      
      }
+     
 ?>
 
 Note: 
