@@ -113,5 +113,4 @@ You can use any query either is it Create, Read, Update, Delete, and Search on t
 
 Additional Note:
 
-You can download a copy of this because it has already a working examples and all you have to do is to change the
-the server details on config.inc.php.
+You can download a copy of this because it has already a working examples and all you have to do is to change the server details on config.inc.php.
